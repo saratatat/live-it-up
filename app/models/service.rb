@@ -3,4 +3,5 @@ class Service < ApplicationRecord
   validates :title, presence: true
   validates :description, presence: true
   validates_associated :user
+  has_one_attached :image
 end
