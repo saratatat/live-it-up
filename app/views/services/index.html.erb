@@ -1,17 +1,28 @@
-<h1>Services</h1>
-<%= link_to 'New Service', new_service_path %>
-
-<table>
-  <tbody>
-	<% @services.each do |service| %>
-	  <tr>
-		<td><%= service.title %></td>
-		<td><%= service.description %></td>
-		<td><%= link_to 'Show', service %></td>
-		<td><%= link_to 'Edit', edit_service_path(service) %></td>
-		<td><%= link_to 'Destroy', service, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-	  </tr>
-	<% end %>
-  </tbody>
-</table>
-<%#  %>
+<div class="container">
+  <h1>Our Services</h1>
+  <div class="cards">
+    <% @services.each do |service| %>
+      <div class="card">
+        <div class="card-image">
+          <% if service.image.present? %>
+            <%= image_tag service.image, class: "service-image" %>
+          <% else %>
+            <div class="placeholder-image">
+              <p>No Image Available</p>
+            </div>
+          <% end %>
+          <div class="date">
+            <%= service.date%>
+          </div>
+        </div>
+        <div class="card-details">
+          <h2><%= service.title %></h2>
+          <p><%= service.description %></p>
+          <div class="rating">
+            <%= service.rating %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
