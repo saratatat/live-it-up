@@ -37,3 +37,28 @@
     align-items: center;
   }
 }
+
+.carousel-item {
+  height: 500px; /* Adjust the height as needed */
+}
+
+/* Ensure images cover the entire carousel area */
+.carousel-item img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover; /* This makes the image cover the entire area */
+}
+
+.mission {
+  background-size: cover;
+  background-position: center;
+  margin-top: 30px;
+  padding: 0 15px;
+  height: 120px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 5px;
+}

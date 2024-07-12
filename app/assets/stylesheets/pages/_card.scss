@@ -23,7 +23,7 @@
 }
 
 .card-event .card-event-infos {
-  padding: 16px;
+  padding: 20px;
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -40,24 +40,22 @@
 .card-category {
   background-size: cover;
   background-position: center;
-  height: 180px;
+  height: 130px;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
+  font-size: 22px;
   font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border-radius: 5px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
 
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
-  margin-top: 20px;
-  padding: 0 100px;
+  margin-top: 40px;
+  padding: 0;
 }
 
 // Smallest device
