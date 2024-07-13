@@ -1,4 +1,4 @@
-<%= form_with model: @service do |f| %>
+<div class="form-container"><%= form_with model: @service do |f| %>
   <%= f.label :name %>
   <%= f.text_field :name %>
   <%= f.label :description %>
@@ -7,3 +7,4 @@
   <%= f.text_field :date %>
   <%= f.submit %>
 <% end %>
+</div>
