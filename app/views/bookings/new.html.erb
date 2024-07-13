@@ -1,0 +1,32 @@
+
+<div class="container-booking">
+  <h1 class="text-center">Book Service</h1>
+  <%= form_with(model: [@service, @booking], url: service_bookings_path(@service), method: :post) do |form| %>
+    <div class="field">
+      <%= form.label :date %>
+      <%= form.date_field :date %>
+    </div>
+
+    <div class="field">
+      <%= form.label :message %>
+      <%= form.text_area :message %>
+    </div>
+
+    <div class="field">
+      <%= form.label :fullname, "Full Name" %>
+      <%= form.text_field :fullname %>
+    </div>
+
+    <div class="field">
+      <%= form.label :status, "status" %>
+      <%= form.text_field :status %>
+    </div>
+
+    <%= form.hidden_field :service_id, value: @service.id %>
+
+    <div class="actions text-center">
+      <%= form.submit 'Book Now' %>
+      <%= link_to 'Back to Service', service_path(@service) %>
+    </div>
+  <% end %>
+</div>

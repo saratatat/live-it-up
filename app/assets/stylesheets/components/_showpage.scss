@@ -1,0 +1,121 @@
+/* Body styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Event container */
+.event-container {
+  max-width: 600px;
+  margin: 50px auto;
+  position: relative;
+  transition: transform 0.3s ease-in;
+  /* Ensure relative positioning for absolute children */
+}
+.event-container:hover {
+  cursor: pointer;
+  transform: translateY(-5px);
+}
+
+/* Event image */
+.event-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+}
+
+.event-image img {
+  width: 100%;
+  height: auto;
+  transition: transform 0.2s ease-in;
+}
+
+.event-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  /* Semi-transparent background for readability */
+  color: #fff;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+/* Event title */
+.event-title {
+  font-size: 1.5em;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Event details */
+.event-details {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.event-description {
+  font-size: 1em;
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.event-rating {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: #ffc107;
+  color: #333;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: 0.3s ease-in;
+}
+
+.event-rating:hover {
+  transform: translateY(-5px);
+  cursor: pointer;
+}
+
+
+/* Event actions */
+.event-actions {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Book button and Back button */
+.btn-book,
+.btn-back {
+  display: inline-block;
+  padding: 12px 24px;
+  margin: 10px;
+  font-size: 1.2em;
+  color: #fff;
+  background-color: #EE5A36;
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover effect for buttons */
+.btn-book:hover,
+.btn-back:hover {
+  background-color: #fe6f4c;
+  transform: translateY(-2px);
+  color: black;
+}
+
+/* Back button specific styling */
+.btn-back {
+  background-color: black;
+}
+
+.btn-back:hover {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
