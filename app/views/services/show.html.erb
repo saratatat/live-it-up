@@ -1,8 +1,36 @@
-<h2><%= @service.name %></h2>
-<p><%= @service.description %></p>
-<p><%= @service.date %></p>
-
-<%= link_to "Delete",
-  service_path(@service),
-  data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}
-%>
+<%# <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://res.cloudinary.com/dneopsx5s/image/upload/v1720554485/priscilla-du-preez-nF8xhLMmg0c-unsplash_1_twzvtw.jpg);">
+  <div class="container">
+  <h1>Live it up </h1>
+  <center>
+    <h2 class="scnd-title"><strong>Move</strong>,<strong>Connect</strong>,<strong>Make memories</strong>!</h2>
+    </center>
+    <p></p>
+    <a class="btn btn-flat" href="#">Apply now</a>
+  </div>
+</div> %>
+<br>
+  <div class="event-container">
+  <div class="event-image">
+    <% if @service.image.present? %>
+      <img src="<%= @service.image %>" alt="<%= @service.title %>">
+    <% else %>
+      <img src="https://via.placeholder.com/800x400?text=No+Image+Available" alt="No image available">
+    <% end %>
+    <div class="event-content">
+      <h1 class="event-title"><%= @service.title %></h1>
+      <div class="event-details">
+        <p class="event-description"><%= @service.description %></p>
+        <div class="event-rating">
+          <i class="fas fa-star"></i> <%= @service.rating %>
+        </div>
+        <div class="event-price">
+          <strong>Price:</strong> <%= @service.price %> MAD
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="event-actions">
+    <%= link_to 'Book Now', root_path, class: 'btn-book' %>
+    <%= link_to 'Back to Events', services_path, class: 'btn-back' %>
+  </div>
+</div>
